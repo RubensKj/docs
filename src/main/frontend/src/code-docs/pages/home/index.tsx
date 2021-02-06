@@ -11,7 +11,7 @@ const Home: React.FC = () => {
       <Container>
         <TextContent>
           <h1>Documenting all of your projects with Docs..</h1>
-          <p>A better way to creating documentation for your projects</p>
+          <p>Improve your documentation by bring to Docs! A easier way to create documentation and can be accessed in anywhere.</p>
           <GetStartedArea>
             <Linking href='/get-started' className="button-style">
               <Span>Get Started</Span>

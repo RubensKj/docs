@@ -1,15 +1,26 @@
-import React, { useState } from 'react';
+import React, { SetStateAction, useEffect, useState } from 'react';
 import { useHotkeys } from 'react-hotkeys-hook';
 import { Styles } from 'react-modal';
+
+// Interfaces
+import { Documentation } from '../../model/model';
+
+// Api
+import { resolveInitial } from '../../api/documentation-api';
+import { FilterDocumentations } from '../../service/filterer';
 
 // Components
 import SearchBar from './search-bar';
 import Modal from '../../../core/Modal';
 
-import { ModalContent, SearchContent, FooterModal, IconArea } from './styles';
+import { ModalContent, SearchContent, FooterModal, IconArea, DocsCards } from './styles';
 import { Line, Span } from '../../../core/Styles/utils';
+import SearchCard from './search-card';
 
 export interface SearchProps {
+  filter?: string;
+  setFilter?: React.Dispatch<SetStateAction<string>>;
+
   isModalOpen?: boolean;
   toggleModal?: () => void;
 
@@ -17,7 +28,14 @@ export interface SearchProps {
 }
 
 const Search: React.FC = () => {
+  const [filter, setFilter] = useState<string>('');
   const [isModalOpen, setModalOpen] = useState<boolean>(false);
+  const [docs, setDocs] = useState<Documentation[]>(resolveInitial());
+  const [filteredList, setFilteredList] = useState<Documentation[]>(resolveInitial());
+
+  useEffect(() => {
+    setFilteredList(docs.filter(doc => FilterDocumentations(doc, filter)))
+  }, [filter, docs]);
 
   useHotkeys('ctrl+m', () => {
     setModalOpen(!isModalOpen);
@@ -31,9 +49,15 @@ const Search: React.FC = () => {
     <React.Fragment>
       <Modal isOpen={isModalOpen} setIsOpen={toggleModal} styles={MODAL_STYLES}>
         <ModalContent>
-          <SearchBar isModalOpen={isModalOpen} />
+          <SearchBar isModalOpen={isModalOpen} filter={filter} setFilter={setFilter} />
           <SearchContent>
-            <p>No recent searches</p>
+            {filteredList ? (
+              <DocsCards>
+                {filteredList.map(doc => <SearchCard key={doc.id} doc={doc} />)}
+              </DocsCards>
+            ) : (
+                <p>No recent searches</p>
+              )}
           </SearchContent>
           <Line className="line" />
           <FooterModal>

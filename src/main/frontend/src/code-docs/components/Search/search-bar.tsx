@@ -10,7 +10,8 @@ import { Input, Span } from '../../../core/Styles/utils';
 import { Container, Form, KeybindIcons, IconArea } from './styles';
 
 
-const SearchBar: React.FC<SearchProps> = ({ isModalOpen, toggleModal, disabled }) => {
+const SearchBar: React.FC<SearchProps> = ({ filter, setFilter, isModalOpen, toggleModal, disabled }) => {
+  const [filterDoc, setFilterDoc] = useState<string | undefined>(filter);
   const [isOpen, setIsOpen] = useState<boolean | undefined>(false);
   const inputRef = useRef<HTMLInputElement | null>(null);
 
@@ -25,11 +26,19 @@ const SearchBar: React.FC<SearchProps> = ({ isModalOpen, toggleModal, disabled }
     }
   }
 
+  const onChange = (f: string) => {
+    if (setFilter) {
+      setFilter(f);
+    }
+
+    setFilterDoc(f);
+  }
+
   return (
     <Container>
       <Form onClick={openSearchBar} disabled={disabled}>
         <SearchIcon color="rgba(107,114,128,var(--text-opacity))" size={16} />
-        <Input ref={inputRef} placeholder="Search for a doc.." disabled={disabled} />
+        <Input ref={inputRef} value={filterDoc} onChange={(e) => onChange(e.target.value)} placeholder="Search for a doc.." disabled={disabled} />
         {isOpen && (
           <KeybindIcons>
             <IconArea>

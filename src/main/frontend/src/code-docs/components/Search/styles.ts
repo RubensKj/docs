@@ -106,12 +106,15 @@ export const ModalContent = styled.div`
 export const SearchContent = styled.div`
   display: flex;
   justify-content: flex-start;
-  align-items: center;
+  align-items: flex-start;
 
   width: 100%;
   height: 100%;
 
   min-height: 92px;
+  max-height: 445px;
+
+  transition: 0.2s height;
 
   overflow-y: scroll;
 
@@ -145,5 +148,47 @@ export const FooterModal = styled.div`
     font-size: 14px;
     font-weight: 400;
     color: rgba(107,114,128,var(--text-opacity));
+  }
+`;
+
+export const DocsCards = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  width: 100% !important;
+
+  padding: 0 !important;
+
+  a {
+    max-width: none !important;
+    width: 100% !important;
+
+    user-select: none;
+
+    margin-bottom: 8px;
+  }
+`;
+
+export const Card = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+  width: 100%;
+
+  border: 1px solid var(--border-header-color);
+  border-radius: 4px;
+
+  h3 {
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  p {
+    font-size: 15px;
+    font-weight: 300;
   }
 `;
