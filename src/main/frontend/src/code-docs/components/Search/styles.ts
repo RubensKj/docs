@@ -74,7 +74,7 @@ export const IconArea = styled.div`
   border: 1px solid var(--border-header-color);
   border-radius: 4px;
 
-  max-width: 20px;
+  max-width: 20px !important;
   max-height: 20px;
   
   width: 100%;
@@ -90,8 +90,60 @@ export const ModalContent = styled.div`
   div {
     max-width: none;
 
+    padding: 12px 15px;
+
     @media only screen and (max-width: 765px) {
       display: flex;
     }
+  }
+
+  .line {
+    margin: 0 0 0;
+    padding: 0;
+  }
+`;
+
+export const SearchContent = styled.div`
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  width: 100%;
+  height: 100%;
+
+  min-height: 92px;
+
+  overflow-y: scroll;
+
+  p {
+    font-size: 14px;
+    font-weight: 400;
+    color: rgba(107,114,128,var(--text-opacity));
+  }
+`;
+
+export const FooterModal = styled.div`
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  padding: 8px 15px !important;
+
+  .icon-modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #fafafa;
+
+    transform: scale(0.8);
+
+    border-bottom: 2px solid var(--border-header-color);
+  }
+
+  span {
+    font-size: 14px;
+    font-weight: 400;
+    color: rgba(107,114,128,var(--text-opacity));
   }
 `;

@@ -38,3 +38,9 @@ export const Input = styled.input`
   font-weight: 500;
   font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont, Helvetica Neue, Arial, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
 `;
+
+export const Line = styled.div`
+  border-top: 1px solid var(--border-header-color);
+
+  width: 100%;
+`;
