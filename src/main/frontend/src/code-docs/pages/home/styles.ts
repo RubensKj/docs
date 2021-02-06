@@ -43,6 +43,7 @@ export const TextContent = styled.div`
   @media only screen and (max-width: 1030px) {
     text-align: center !important;
     margin-right: 0;
+    margin-left: 0;
     padding: 0 15px;
 
     h1 {
@@ -107,6 +108,10 @@ export const GetStartedArea = styled.div`
     color: #0A72EF;
     background: #FFF;
     box-shadow: 0px 1px 2px 1px rgba(30,35,90,0.1);
+  }
+
+  @media only screen and (max-width: 1030px) {
+    justify-content: center;
   }
 `;
 
