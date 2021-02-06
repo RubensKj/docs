@@ -80,11 +80,18 @@ export const LogoArea = styled.div`
 
   white-space: nowrap;
 
-  margin-right: 16px;
+  margin-right: 25px;
 
   @media only screen and (max-width: 765px) {
     justify-content: flex-start;
   }
+`;
+
+export const Title = styled.h1`
+  font-size: 24px;
+
+  font-weight: 800;
+  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont, Helvetica Neue, Arial, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
 `;
 
 export const Logo = styled.div`
