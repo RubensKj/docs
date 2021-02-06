@@ -55,7 +55,7 @@ export const RightSide = styled.div`
     width: 100%;
 
     margin: 12px 0;
-    justify-content: flex-start;
+    justify-content: space-between;
 
     a {
       margin-left: 0;

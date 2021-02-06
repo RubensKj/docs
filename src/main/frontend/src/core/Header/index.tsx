@@ -5,7 +5,7 @@ import Github from '../Assets/Github';
 import LogoImage from '../../code-docs/assets/logo';
 
 // Components
-import SearchBar from '../../code-docs/components/SearchBar';
+import Search from '../../code-docs/components/Search/search';
 
 // Styles
 import { Linking, Span } from '../Styles/utils';
@@ -24,7 +24,7 @@ const Header: React.FC = () => {
               <Title>Docs</Title>
             </LogoArea>
           </Linking>
-          <SearchBar />
+          <Search />
         </LeftSide>
         <RightSide>
           <ListLinks>
