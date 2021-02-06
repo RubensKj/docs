@@ -9,6 +9,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   html body #root {
+    color: #161e2e;
   }
 
   body {

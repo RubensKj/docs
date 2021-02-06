@@ -2,9 +2,10 @@ import React from 'react';
 
 // Icons
 import Github from '../Assets/Github';
+import LogoImage from '../../code-docs/assets/logo';
 
 // Components
-import SearchBar from '../SearchBar';
+import SearchBar from '../../code-docs/components/SearchBar';
 
 // Styles
 import { Linking, Span } from '../Styles/utils';
@@ -18,7 +19,7 @@ const Header: React.FC = () => {
           <Linking href='/'>
             <LogoArea>
               <Logo>
-                <img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Google_Docs.max-1100x1100.png" alt="Logo" />
+                <LogoImage color="#0A72EF" size={24} />
               </Logo>
               <Title>Docs</Title>
             </LogoArea>

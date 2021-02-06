@@ -1,7 +1,7 @@
 import React from 'react';
 
 // Styles
-import { Input } from '../Styles/utils';
+import { Input } from '../../../core/Styles/utils';
 import { Container, Form } from './styles';
 
 const SearchBar: React.FC = () => {
