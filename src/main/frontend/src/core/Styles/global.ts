@@ -27,7 +27,7 @@ const GlobalStyle = createGlobalStyle`
     --border-opacity: 1;
     --text-opacity: 0.8;
 
-    --header-height: 62px;
+    --header-height: 66px;
     --space-x-reverse: -0.38;
 
     --border-header-color: rgba(229,231,235,var(--border-opacity));
