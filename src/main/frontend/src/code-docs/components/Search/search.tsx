@@ -51,7 +51,7 @@ const Search: React.FC = () => {
         <ModalContent>
           <SearchBar isModalOpen={isModalOpen} filter={filter} setFilter={setFilter} />
           <SearchContent>
-            {filteredList ? (
+            {filteredList && filteredList.length > 0 ? (
               <DocsCards>
                 {filteredList.map(doc => <SearchCard key={doc.id} doc={doc} />)}
               </DocsCards>
