@@ -17,10 +17,12 @@ export const Header = styled.div`
 
   text-align: center;
 
-  margin-top: 32px;
   width: 100%;
 
   padding: 0 15px;
+  padding-top: 32px;
+
+  background: #f9fafb;
 
   padding-bottom: 68px;
 
