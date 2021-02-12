@@ -158,7 +158,7 @@ export const Benefits = styled.div`
 
 export const BenefitsCard = styled.div`
   max-width: var(--max-width-benefits-card);
-  min-height: 245px;
+  min-height: 185px;
 
   h1 {
     font-size: 25px;

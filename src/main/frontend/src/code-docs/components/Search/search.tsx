@@ -25,6 +25,7 @@ export interface SearchProps {
   toggleModal?: () => void;
 
   disabled?: boolean;
+  showKeybind?: boolean;
 }
 
 const Search: React.FC = () => {

@@ -28,7 +28,7 @@ const Header: React.FC = () => {
         </LeftSide>
         <RightSide>
           <ListLinks>
-            <Linking>
+            <Linking href='/docs'>
               <Span>Docs</Span>
             </Linking>
             <Linking>
