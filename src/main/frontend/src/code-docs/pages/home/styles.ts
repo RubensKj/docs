@@ -7,7 +7,7 @@ export const Container = styled.div`
   margin: 0 auto;
   margin-top: 28px;
 
-  max-width: 1328px;
+  max-width: var(--max-width);
   width: 100%;
   
   padding-bottom: 78px;
@@ -117,11 +117,65 @@ export const GetStartedArea = styled.div`
 
 export const ColumnArea = styled.div`
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
 
   background: #f9fafb;
 
   width: 100%;
   min-height: 400px;
+  height: 100%;
+
+  margin: 0 auto;
+`;
+
+export const Benefits = styled.div`
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: center;
+  align-items: center;
+
+  max-width: var(--max-width);
+  width: 100%;
+  height: 100%;
+
+  grid-gap: 35px;
+
+  margin: 0 auto;
+
+  @media only screen and (max-width: 1140px) {
+    display: flex !important;
+    flex-direction: column;
+
+    max-width: none !important;
+    
+    margin-top: 75px;
+    margin-bottom: 55px;
+
+    padding: 0 25px;
+  }
+`;
+
+export const BenefitsCard = styled.div`
+  max-width: var(--max-width-benefits-card);
+  min-height: 245px;
+
+  h1 {
+    font-size: 25px;
+
+    margin-bottom: 12px;
+  }
+
+  p {
+    font-weight: 400;
+    font-size: 18px;
+
+    color: rgba(22,30,46,var(--text-opacity));
+  }
+
+  @media only screen and (max-width: 1140px) {
+    width: 100%;
+
+    max-width: 555px;
+  }
 `;

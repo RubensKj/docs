@@ -25,6 +25,9 @@ const GlobalStyle = createGlobalStyle`
   }
 
   :root {
+    --max-width: 1328px;
+    --max-width-benefits-card: 335px;
+
     --border-opacity: 1;
     --text-opacity: 0.8;
 

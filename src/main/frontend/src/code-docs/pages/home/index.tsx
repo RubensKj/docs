@@ -3,7 +3,7 @@ import React from 'react';
 import Logo from '../../../code-docs/assets/logo';
 import { Line, Linking, Span } from '../../../core/Styles/utils';
 
-import { Container, TextContent, LogoArea, GetStartedArea, ColumnArea } from './styles';
+import { Container, TextContent, LogoArea, GetStartedArea, ColumnArea, Benefits, BenefitsCard } from './styles';
 
 const Home: React.FC = () => {
   return (
@@ -27,7 +27,20 @@ const Home: React.FC = () => {
       </Container>
       <Line />
       <ColumnArea>
-        <p>Testing</p>
+        <Benefits>
+          <BenefitsCard>
+            <h1>Simple & Intuitive</h1>
+            <p>Easy to create a documentation for all of your project. Create each doc to each project that you have!! All linked to your account.</p>
+          </BenefitsCard>
+          <BenefitsCard>
+            <h1>Easy to share</h1>
+            <p>You can create all roles to each user that will access your documentation. You can add your coleges to colaborate with you in your docs, every feature they will be able to add a doc page.</p>
+          </BenefitsCard>
+          <BenefitsCard>
+            <h1>Powerful</h1>
+            <p>Make your live easier in case you want someone to understand a process from your project.</p>
+          </BenefitsCard>
+        </Benefits>
       </ColumnArea>
     </React.Fragment>
   );
