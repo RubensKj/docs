@@ -31,7 +31,7 @@ export interface SearchProps {
 const Search: React.FC = () => {
   const [filter, setFilter] = useState<string>('');
   const [isModalOpen, setModalOpen] = useState<boolean>(false);
-  const [docs, setDocs] = useState<Documentation[]>(resolveInitial());
+  const [docs] = useState<Documentation[]>(resolveInitial());
   const [filteredList, setFilteredList] = useState<Documentation[]>(resolveInitial());
 
   useEffect(() => {

@@ -25,7 +25,10 @@ const SearchBar: React.FC<SearchProps> = ({ filter, setFilter, isModalOpen, togg
     }
   }
 
-  const onChange = (f: string) => {
+  const onChangeFilter = (event: React.ChangeEvent<HTMLInputElement>) => {
+    event.preventDefault();
+    const f = event.target.value;
+
     if (setFilter) {
       setFilter(f);
     }
@@ -37,7 +40,7 @@ const SearchBar: React.FC<SearchProps> = ({ filter, setFilter, isModalOpen, togg
     <Container>
       <Form onClick={openSearchBar} disabled={disabled}>
         <SearchIcon color="rgba(107,114,128,var(--text-opacity))" size={16} />
-        <Input ref={inputRef} value={filterDoc} onChange={(e) => onChange(e.target.value)} placeholder="Search for a doc.." disabled={disabled} />
+        <Input ref={inputRef} value={filterDoc} onChange={(e) => onChangeFilter(e)} placeholder="Search for a doc.." disabled={disabled} />
         {isOpen && showKeybind && (
           <KeybindIcons>
             <IconArea>
