@@ -9,6 +9,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   html body #root {
+    height: 100%;
     color: #161e2e;
   }
 
@@ -28,11 +29,21 @@ const GlobalStyle = createGlobalStyle`
     --max-width: 1328px;
     --max-width-benefits-card: 335px;
 
+    --padding-header: 0 15px;
+
+    --button-hover: #f1f1f1;
+
+
+    --tree-background: #FFF;
+    --tree-width: 300px;
+
     --border-opacity: 1;
     --text-opacity: 0.8;
 
     --header-height: 66px;
     --space-x-reverse: -0.38;
+
+    --sub-header-height-responsive: 48px;
 
     --border-header-color: rgba(229,231,235,var(--border-opacity));
   }

@@ -16,7 +16,7 @@ export const Content = styled.div`
   justify-content: space-between;
   align-items: center;
 
-  padding: 0 15px;
+  padding: var(--padding-header);
 
   max-width: 1378px;
   width: 100%;
