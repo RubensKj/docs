@@ -1,9 +1,11 @@
 import React from 'react';
-import { Linking } from '../../../core/Styles/utils';
 
 import { Documentation } from '../../model/model';
 
+import { Linking } from '../../../core/Styles/utils';
 import { Card } from './styles';
+
+import { resolveDocsMainPageUrl } from '../../api/docs-utils';
 
 interface CardProps {
   doc: Documentation;
@@ -11,7 +13,7 @@ interface CardProps {
 
 const SearchCard: React.FC<CardProps> = ({ doc }) => {
   return (
-    <Linking href={`/docs/${doc.id}`}>
+    <Linking href={resolveDocsMainPageUrl(doc.id, doc.mainPageId)}>
       <Card>
         <h3>{doc.name}</h3>
         <p>{doc.description}</p>

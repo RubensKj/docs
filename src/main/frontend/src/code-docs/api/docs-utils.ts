@@ -10,3 +10,7 @@ export const resolveCurrentPageByDocumentation = (documentationId: string, pageI
 
   return documentation && (documentation.pages?.find(page => page.id === pageId));
 }
+
+export const resolveDocsMainPageUrl = (documentationId: string, mainPageId: string) => {
+  return `/docs/${documentationId}/${mainPageId}`;
+}

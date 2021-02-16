@@ -7,6 +7,7 @@ export interface DocPage {
 export interface Documentation {
   id: string;
   name: string;
+  mainPageId: string;
   description?: string;
   pages?: DocPage[];
 }

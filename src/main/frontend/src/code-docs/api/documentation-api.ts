@@ -2,9 +2,9 @@ import { Documentation } from "../model/model";
 
 export const resolveInitial = (): Documentation[] => {
   return [
-    { id: '601f11008a9c9e63ed1d8e04', name: 'Docs Documentation', description: 'Documentation to Docs, from Get Starting to Advanced.' },
-    { id: '546f1178af1cf67ae9108eef', name: 'Discord Documentation', description: 'Discord docs, learn how to built a server.' },
-    { id: '873f119fc5613643dbcc1974', name: 'Whatsapp Docs', description: 'How to build a bot to whatsapp.' },
+    { id: '601f11008a9c9e63ed1d8e04', name: 'Docs Documentation', mainPageId: '602b28a063bdc4ed90b4da9e', description: 'Documentation to Docs, from Get Starting to Advanced.' },
+    { id: '546f1178af1cf67ae9108eef', name: 'Discord Documentation', mainPageId: '602b28a063bdc4ed90b4da9e', description: 'Discord docs, learn how to built a server.' },
+    { id: '873f119fc5613643dbcc1974', name: 'Whatsapp Docs', mainPageId: '602b28a063bdc4ed90b4da9e', description: 'How to build a bot to whatsapp.' },
   ];
 };
 
@@ -12,6 +12,7 @@ export const resolveInitialDocumentation = (id: string): Documentation => {
   return {
     id: '602b28a063bdc4ed90b4da9e',
     name: 'Getting Started',
+    mainPageId: '602b2951de08466fce3aa453',
     description: 'Get started using docs to documentate all your projects',
     pages: [
       {

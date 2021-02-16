@@ -7,6 +7,7 @@ import SearchBar from '../../components/Search/search-bar';
 import { resolveInitial } from '../../api/documentation-api';
 import { Documentation } from '../../model/model';
 import { FilterDocumentations } from '../../service/filterer';
+import { resolveDocsMainPageUrl } from '../../api/docs-utils';
 
 import { Container, Header, SearchArea, DocsList, DocCard } from './styles';
 
@@ -43,7 +44,7 @@ const Docs: React.FC = () => {
       {filteredList && filteredList.length > 0 ? (
         <DocsList>
           {filteredList.map(documentation => (
-            <Linking key={documentation.id} href={`/docs/${documentation.id}`}>
+            <Linking key={documentation.id} href={resolveDocsMainPageUrl(documentation.id, documentation.mainPageId)}>
               <DocCard>
                 <h1>{documentation.name}</h1>
                 <p>{documentation.description}</p>
