@@ -11,11 +11,11 @@ import GlobalStyles from './Styles/global';
 
 const Core: React.FC = () => {
   return (
-    <>
+    <React.Fragment>
       <Header />
       <Router />
       <GlobalStyles />
-    </>
+    </React.Fragment>
   );
 }
 

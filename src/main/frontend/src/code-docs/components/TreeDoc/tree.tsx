@@ -3,8 +3,14 @@ import Justify from '../../assets/justify';
 
 import TreeTabs from './tree-tabs';
 import { HeaderResponsive, RespLeft, Container, TitleArea } from './styles';
+import { Documentation } from '../../model/model';
 
-const TreeDoc: React.FC = () => {
+interface TreeProps {
+  pageId?: string;
+  documentation: Documentation;
+}
+
+const TreeDoc: React.FC<TreeProps> = (props) => {
   const [isOpenTab, setIsOpenTab] = useState<boolean>(false);
 
   const toggleTab = () => {
@@ -25,11 +31,9 @@ const TreeDoc: React.FC = () => {
       <Container isOpenTab={isOpenTab}>
         <div className="wrapper">
           <TitleArea>
-            <h1>Getting Started</h1>
+            <h1>{props.documentation.name}</h1>
           </TitleArea>
-          <TreeTabs>
-            <p>Hello World</p>
-          </TreeTabs>
+          <TreeTabs pageId={props.pageId} fields={props.documentation.pages} />
         </div>
       </Container>
     </React.Fragment>

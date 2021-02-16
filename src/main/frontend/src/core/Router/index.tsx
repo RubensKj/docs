@@ -13,8 +13,8 @@ const Router: React.FC = () => {
     <BrowserRouter>
       <Switch>
         <Route exact path='/' component={Home} />
-        <Route path='/docs' component={Docs} />
-        <Route path='/get-started' component={GetStarted} />
+        <Route exact path='/docs' component={Docs} />
+        <Route path='/docs/:documentationId/:pageId' component={GetStarted} />
       </Switch>
     </BrowserRouter>
   );

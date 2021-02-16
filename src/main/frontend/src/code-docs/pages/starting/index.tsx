@@ -1,16 +1,12 @@
 import React from 'react';
 
 // Components
-import TreeDoc from '../../components/TreeDoc/tree';
-import DocumentationTab from '../../components/DocumentationTab/documentation-tab';
-
-import { Container } from './styles';
+import DocsCore from '../../components/DocsCore/docs-core';
 
 const Starting: React.FC = () => {
   return (
     <React.Fragment>
-      <TreeDoc />
-      <DocumentationTab />
+      <DocsCore />
     </React.Fragment>
   );
 }

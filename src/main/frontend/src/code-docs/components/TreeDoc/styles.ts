@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Linking } from '../../../core/Styles/utils';
 
 interface TabProps {
   isOpenTab: boolean;
@@ -110,4 +111,36 @@ export const TreeTabsContainer = styled.div`
   height: 100%;
 
   overflow-y: auto;
+`;
+
+export const FieldTree = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  width: 100%;
+`;
+
+export const LinkingDoc = styled(Linking)`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 18px;
+  font-weight: 400;
+
+  h4 {
+    font-weight: 600;
+  }
+`;
+
+export const Childrens = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  padding: 2px 5px 1.5px;
 `;

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import Logo from '../../../code-docs/assets/logo';
 import { Line, Linking, Span } from '../../../core/Styles/utils';
@@ -6,6 +6,8 @@ import { Line, Linking, Span } from '../../../core/Styles/utils';
 import { Container, TextContent, LogoArea, GetStartedArea, ColumnArea, Benefits, BenefitsCard } from './styles';
 
 const Home: React.FC = () => {
+  const [getStartedUrl] = useState<string>('602b28a063bdc4ed90b4da9e/602b2951de08466fce3aa453');
+
   return (
     <React.Fragment>
       <Container>
@@ -13,7 +15,7 @@ const Home: React.FC = () => {
           <h1>Documenting all of your projects with Docs..</h1>
           <p>Improve your documentation by bring to Docs! A easier way to create documentation and can be accessed in anywhere.</p>
           <GetStartedArea>
-            <Linking href='/get-started' className="button-style">
+            <Linking href={`/docs/${getStartedUrl}`} className="button-style">
               <Span>Get Started</Span>
             </Linking>
             <Linking href='https://github.com/RubensKj/docs' target='_blank' className="github-button">
