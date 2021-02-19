@@ -9,6 +9,7 @@ import { Documentation } from '../../model/model';
 import { FilterDocumentations } from '../../service/filterer';
 import { resolveDocsMainPageUrl } from '../../api/docs-utils';
 
+// Styles
 import { Container, Header, SearchArea, DocsList, DocCard } from './styles';
 
 const Docs: React.FC = () => {
