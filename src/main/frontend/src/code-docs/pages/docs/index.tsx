@@ -1,5 +1,9 @@
 import React, { useCallback, useEffect, useState } from 'react';
+
+// Utils
 import { Linking } from '../../../core/Styles/utils';
+
+// Components
 import Logo from '../../assets/logo';
 import SearchBar from '../../components/Search/search-bar';
 
