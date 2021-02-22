@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 
 import Logo from '../../../code-docs/assets/logo';
-import { Line, Linking, Span } from '../../../core/Styles/utils';
 
+import { Line, Linking, Span } from '../../../core/Styles/utils';
 import { Container, TextContent, LogoArea, GetStartedArea, ColumnArea, Benefits, BenefitsCard } from './styles';
 
 const Home: React.FC = () => {
