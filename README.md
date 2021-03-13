@@ -62,3 +62,8 @@ Guide: https://quarkus.io/guides/rest-json
 <p><b>Quarked!</b></p>
 
 Guide: https://quarkus.io/guides/rest-json
+
+
+---
+
+Adding the basic page to doc
