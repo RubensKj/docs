@@ -14,6 +14,7 @@ export const Container = styled.div`
 
   @media only screen and (max-width: 1030px) {
     margin-top: 95px;
+    justify-content: center;
   }
 `;
 

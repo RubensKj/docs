@@ -72,9 +72,8 @@ export const Container = styled.div<TabProps>`
   height: 100%;
   border-right: 1px solid var(--border-header-color);
 
-  transition: 0.2s width;
+  transition: width 0.8s;
 
-  z-index: 10;
   background: var(--tree-background);
   overflow: hidden;
 
